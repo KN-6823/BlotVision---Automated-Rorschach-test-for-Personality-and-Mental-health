@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/signup.css">
+    <link rel="stylesheet" href="../public/login.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        .password-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="row signup-container mx-auto">
+            <div class="col-md-6 p-0">
+                <img src="https://media.licdn.com/dms/image/C4D12AQEeKAn9dPLbhw/article-cover_image-shrink_600_2000/0/1616667695311?e=2147483647&v=beta&t=KTbbDeJ4Wwf6KFCPZ0Q1Et1jbaD7d81SHbTx-NVs3QA" 
+                     alt="background image" 
+                     class="img-fluid h-100 w-100 object-fit-cover">
+            </div>
+            <div class="col-md-6 bg-white p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h1 class="signup-title">CREATE ACCOUNT</h1>
+                </div>
+
+                <form action="/signup" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control custom-input" name="name" placeholder="Enter your name..." required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control custom-input" name="email" placeholder="Enter your email..." required>
+                    </div>
+                    <div class="mb-3 position-relative">
+                        <input type="password" class="form-control custom-input" id="password" name="password" placeholder="Enter your password..." required>
+                        <span class="password-icon" onclick="togglePasswordVisibility()">
+                            <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                        </span>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                <div class="gender-section">
+                                    <label class="gender-label">Gender:</label>
+                                    <div class="gender-options">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="gender" value="Male" required>
+                                            <label class="form-check-label">Male</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="gender" value="Female" required>
+                                            <label class="form-check-label">Female</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="gender" value="Other" required>
+                                            <label class="form-check-label">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="age-section">
+                                    <label class="age-label">Age:</label>
+                                    <input type="number" class="age-input" name="age" min="18" max="100" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-4">
+                        <button type="submit" class="btn custom-btn">Sign Up</button>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="login-prompt mb-0">
+                            Already have an account? <a href="/login" class="login-link">Login here</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePasswordIcon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('bi-eye');
+                toggleIcon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('bi-eye-slash');
+                toggleIcon.classList.add('bi-eye');
+            }
+        }
+    </script>
+</body>
+</html>

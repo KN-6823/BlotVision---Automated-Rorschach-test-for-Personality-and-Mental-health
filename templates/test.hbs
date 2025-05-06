@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BlotVision</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../public/test.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm px-4 py-3">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-primary">
+                <img src="img/logo.png" alt="logo" style="width: 50px; height: auto; vertical-align: middle;">
+                BlotVision
+            </h1>            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="/home" class="nav-item nav-link ">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="/logout" class="btn btn-danger py-2 px-4 ms-3">Logout</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Image with Buttons and Input Field Section Start -->
+    <div class="container-fluid align-items-center min-vh-100">
+      <div class="row align-items-center">
+          <!-- Image and Buttons Section -->
+          <div class="col-md-6 d-flex flex-column align-items-center">
+              <!-- Image Container -->
+              <div class="image-container mb-4">
+                  <img src="" id="rotate-image" alt="Rotatable Image" class="img-fluid">
+              </div>
+
+              <!-- Buttons -->
+              <div class="button-container mb-4">
+                  <button class="btn btn-primary me-3" id="rotate-left">&#8634; Rotate Left</button>
+                  <button class="btn btn-primary" id="rotate-right">&#8635; Rotate Right</button>
+              </div>
+          </div>
+ 
+       <div class="form-container">
+    <form class="form">
+        <h1 class="head">Research Test Feedback</h1>
+        
+        <div class="form-group">
+            <label for="data">Provide Your Insights</label>
+            <textarea name="data" id="data" rows="12" cols="100" required="" placeholder="Describe your observations, findings, and conclusions here..."></textarea>
+        </div>
+        
+        <div class="d-flex justify-content-start">
+            <button type="button" class="btn btn-primary me-2" id="next-button">Next</button>
+            <button type="button" class="btn btn-success" id="submit-button" style="display: none;">Submit</button>
+        </div>
+    </form>
+</div>
+
+    <!-- Thank You Card -->
+    <div id="thank-you-card" class="card text-center" style="display: none;">
+        <div class="card-body">
+            <h5 class="card-title">Thank You!</h5>
+            <p class="card-text">We appreciate your feedback. Your insights are valuable to us.</p>
+            <a href="/home" class="btn btn-primary">Return to Home</a>
+        </div>
+    </div>
+
+    <!-- Image with Buttons and Input Field Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light py-4 wow fadeInUp">
+        <div class="container pt-5">
+            <div class="row g-5 justify-content-center">
+                <!-- Get In Touch Column -->
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center text-center">
+                    <h3 class="text-white mb-4">Get In Touch</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>SIES GRADUATE SCHOOL OF TECHNOLOGY</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>nishanthnkce121@siesgst.ac.in</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>9867704105</p>
+                </div>
+                
+                <!-- Follow Us Column -->
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center text-center">
+                    <h3 class="text-white mb-4">Follow Us</h3>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container text-center">
+            <p>&copy; <a class="text-white border-bottom" href="#">BlotVision</a>. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+        let currentIndex = 0;
+        const rotateImage = document.getElementById('rotate-image');
+        const nextButton = document.getElementById('next-button');
+        const submitButton = document.getElementById('submit-button');
+        const userInput = document.getElementById('data');
+        const thankYouCard = document.getElementById('thank-you-card');
+        let images = [];
+        let userInputs = [];
+        let analysisResults = []; // Array to store results from /analyze
+
+        // --- Helper Function to Count Frequencies (like Python's Counter) ---
+        function getMostCommon(arr) {
+            if (!arr || arr.length === 0) return "Unknown";
+            const frequency = arr.reduce((count, item) => {
+                count[item] = (count[item] || 0) + 1;
+                return count;
+            }, {});
+            let mostCommonItem = "Unknown";
+            let maxCount = 0;
+            for (const item in frequency) {
+                if (frequency[item] > maxCount) {
+                    maxCount = frequency[item];
+                    mostCommonItem = item;
+                }
+            }
+            return mostCommonItem;
+        }
+        // --- End Helper Function ---
+
+        // --- Function to generate and log summary on the frontend ---
+        function generateAndLogSummary(resultsList) {
+            if (!resultsList || resultsList.length === 0) {
+                console.log("\n--- SUMMARY REPORT (Frontend - No Data) ---");
+                console.log("No analysis results to summarize.");
+                console.log("----------------------------------------\n");
+                return; // Exit if no results
+            }
+
+            // Extract data, handling potential missing keys safely
+            const sentiments = resultsList.map(res => res?.Sentiment?.label ?? 'Unknown');
+            const dominant_emotions = resultsList.map(res => res?.['Dominant Emotion']?.label ?? 'Unknown');
+            const form_qualities = resultsList.map(res => res?.FormQuality ?? 'Unknown');
+            const developmental_qualities = resultsList.map(res => res?.DevelopmentalQuality ?? 'Unknown');
+            const mbti_types = resultsList.map(res => res?.['MBTI Prediction'] ?? 'Unknown');
+
+            // Calculate most common values using helper
+            const most_common_sentiment = getMostCommon(sentiments);
+            const most_common_emotion = getMostCommon(dominant_emotions);
+            const most_common_form_quality = getMostCommon(form_qualities);
+            const most_common_dev_quality = getMostCommon(developmental_qualities);
+            const most_common_mbti_type = getMostCommon(mbti_types);
+
+            // Construct the summary object matching the desired structure
+            const summary_report = {
+                "Overall Sentiment": most_common_sentiment,
+                "Overall Emotion": most_common_emotion,
+                "Overall Form Quality": most_common_form_quality,
+                "Overall Developmental Quality": most_common_dev_quality,
+                "Overall Personality Type": most_common_mbti_type
+            };
+
+            // Log to browser console
+            console.log("\n--- SUMMARY REPORT (Generated Frontend) ---");
+            // Print in the requested format
+             console.log(`Overall Sentiment: ${summary_report["Overall Sentiment"]}`);
+             console.log(`Overall Emotion: ${summary_report["Overall Emotion"]}`);
+             console.log(`Overall Form Quality: ${summary_report["Overall Form Quality"]}`);
+             console.log(`Overall Developmental Quality: ${summary_report["Overall Developmental Quality"]}`);
+             console.log(`Overall Personality Type: ${summary_report["Overall Personality Type"]}`);
+            console.log("-------------------------------------------\n");
+        }
+        // --- End Summary Function ---
+
+
+        async function analyzeResponse(response, imageIndex) {
+            // No try...catch
+            const result = await fetch('http://localhost:5000/analyze', { // Flask endpoint
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', },
+                body: JSON.stringify({ response })
+            });
+
+            if (!result.ok) {
+                throw new Error(`HTTP error fetching analysis! status: ${result.status}`);
+            }
+            const data = await result.json(); // 'data' is the analysis_result object
+
+            // --- Print individual analysis_result object to Browser Console ---
+            console.log(`\n--- Individual Analysis Result (Image ${imageIndex + 1}) ---`);
+            // Log in the requested format
+            console.log(`cardID: ${data.cardID}`);
+            console.log(`Location: ${data.Location}`);
+            console.log(`DevelopmentalQuality: ${data.DevelopmentalQuality}`);
+            console.log(`FormQuality: ${data.FormQuality}`);
+            console.log(`Sentiment:`, data.Sentiment); // Log object
+            console.log(`Dominant Emotion:`, data['Dominant Emotion']); // Log object
+            console.log(`Personality Report:`, data['Personality Report']); // Log object
+            console.log(`MBTI Prediction: ${data['MBTI Prediction']}`);
+            console.log('---------------------------------------------------\n');
+            // --- End Console Log ---
+
+            return data;
+        }
+
+        async function fetchImages() {
+            // No try...catch
+            const response = await fetch('/get-images'); // Node endpoint
+            if (!response.ok) {
+               throw new Error(`HTTP error fetching images! status: ${response.status}`);
+            }
+            const data = await response.json();
+            images = data.map(image => image.url);
+            loadImage();
+        }
+
+        function loadImage() {
+             if (images.length > 0 && currentIndex < images.length) {
+                 rotateImage.src = images[currentIndex];
+                 userInput.value = userInputs[currentIndex] || '';
+                 if (currentIndex === images.length - 1) {
+                     nextButton.style.display = 'none';
+                     submitButton.style.display = 'inline';
+                 } else {
+                     nextButton.style.display = 'inline';
+                     submitButton.style.display = 'none';
+                 }
+             }
+         }
+
+        nextButton.addEventListener('click', async () => {
+            // No try...catch
+            if (!userInput.value.trim()) { alert('Provide insights.'); return; }
+            const currentResponse = userInput.value;
+            userInputs[currentIndex] = currentResponse;
+
+            const analysis = await analyzeResponse(currentResponse, currentIndex); // Will log individual result
+            analysisResults[currentIndex] = analysis; // Store the result
+            currentIndex++;
+            loadImage();
+        });
+
+        submitButton.addEventListener('click', async () => {
+            if (!userInput.value.trim()) { alert('Provide final insights.'); return; }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Processing...';
+
+            const finalResponse = userInput.value;
+            userInputs[currentIndex] = finalResponse;
+
+            const finalAnalysis = await analyzeResponse(finalResponse, currentIndex); // Log final individual result
+            analysisResults[currentIndex] = finalAnalysis; // Store final result
+
+            // --- Generate and Log Summary Report to Browser Console ---
+            generateAndLogSummary(analysisResults);
+            // --- End Summary Log ---
+
+            // Prepare feedback data for submission to MongoDB
+            const feedbackEntries = userInputs.map((feedback, index) => ({
+                feedback: feedback,
+                imageIndex: index,
+                analysis: analysisResults[index] || {}
+            }));
+
+            try {
+                // Submit feedback data to server
+                const submitResponse = await fetch('/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ feedbackEntries })
+                });
+                
+                if (!submitResponse.ok) {
+                    const errorData = await submitResponse.json();
+                    console.error('Failed to save feedback:', errorData.error || submitResponse.statusText);
+                    alert('Failed to save your feedback. Please try again.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Submit';
+                    return;
+                }
+                
+                const result = await submitResponse.json();
+                console.log('Feedback saved successfully:', result);
+            } catch (error) {
+                console.error('Error saving feedback:', error);
+                alert('Error saving your feedback. Please try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit';
+                return;
+            }
+
+            console.log('Sending final analysis results for report image generation...');
+
+            // --- Fetch the final report image ---
+            const reportResponse = await fetch("http://localhost:5000/generate-report-image", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", },
+                // Send the array of collected results
+                body: JSON.stringify({ responses: analysisResults })
+            });
+
+             if (!reportResponse.ok) {
+                 let errorMsg = `Report Image Generation Failed! status: ${reportResponse.status}`;
+                 // Try to get more specific error from response if possible
+                 try { const errorData = await reportResponse.json(); errorMsg = errorData.error || errorMsg; } catch (e) {}
+                 console.error(errorMsg); // Log error before throwing
+                 throw new Error(errorMsg); // Stop execution
+             }
+
+            // --- Handle File Download ---
+             const blob = await reportResponse.blob();
+             const url = window.URL.createObjectURL(blob);
+             const a = document.createElement("a");
+             a.style.display = "none";
+             a.href = url;
+             const disposition = reportResponse.headers.get('Content-Disposition');
+             let filename = "dynamic_personality_report.png"; // Default name
+             if (disposition && disposition.indexOf('attachment') !== -1) {
+                 const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                 const matches = filenameRegex.exec(disposition);
+                 if (matches != null && matches[1]) { filename = matches[1].replace(/['"]/g, ''); }
+             }
+             a.download = filename;
+             document.body.appendChild(a);
+             a.click();
+             window.URL.revokeObjectURL(url);
+             document.body.removeChild(a);
+             console.log(`Report image '${filename}' download initiated.`);
+            // --- End File Download ---
+
+             // Show thank you card
+             thankYouCard.style.display = 'block';
+             document.querySelector('.form-container').style.display = 'none';
+             const imageSection = document.querySelector('.col-md-6.d-flex.flex-column.align-items-center');
+             if (imageSection) { imageSection.style.display = 'none'; }
+
+            // Re-enable button on success
+             submitButton.disabled = false;
+             submitButton.textContent = 'Submit';
+        });
+
+        window.onload = fetchImages;
+        document.addEventListener('DOMContentLoaded', function () {
+            const image = document.getElementById('rotate-image');
+            let rotationAngle = 0;
+
+            document.getElementById('rotate-left').addEventListener('click', function() {
+                rotationAngle -= 90;
+                image.style.transform = `rotate(${rotationAngle}deg)`;
+            });
+
+            document.getElementById('rotate-right').addEventListener('click', function() {
+                rotationAngle += 90;
+                image.style.transform = `rotate(${rotationAngle}deg)`;
+            });
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

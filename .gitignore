@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Node.js modules and logs
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Image files - if these are not needed in GitHub
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Dataset files - if large or sensitive
+*.csv
+
+# Compiled or temporary files
+*.log
+*.tmp
+
+# Email or reset logic folders (if containing sensitive logic)
+password-reset-email/
+public/
