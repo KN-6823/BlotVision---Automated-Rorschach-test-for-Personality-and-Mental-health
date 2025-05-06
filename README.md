@@ -1,6 +1,6 @@
 # 🧠 BlotVision
 
-BlotVision is a web-based application designed to analyze user feedback and generate personality reports based on image-based tests. It leverages machine learning models for sentiment analysis, emotion detection, and MBTI personality classification.
+BlotVision is an AI-driven web platform designed to automate and enhance psychological assessment using the Rorschach Inkblot Test. It streamlines test delivery, provides real-time analysis of user feedback, and generates personality reports using NLP and CNN-based models. Key features include standardized scoring, progress tracking for long-term assessment, and an intuitive interface for both users and clinicians, making mental health evaluation more accessible, consistent, and insightful.
 
 ---
 
